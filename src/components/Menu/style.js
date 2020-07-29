@@ -25,10 +25,10 @@ export const MenuWrapper = styled.nav`
 `;
 
 export const LogoImage = styled.img`
-    max-width: 190px;
+    max-width: 180px;
 
     @media (max-width: 800px) {
-        max-width: 125px;
+        max-width: 105px;
         margin-top: 4px; 
     }
 `;

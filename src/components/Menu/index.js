@@ -1,16 +1,18 @@
-import React from 'react'
-import Logo  from '../../assets/img/Logoastolfo.png'
+import React    from 'react'
+import { Link } from 'react-router-dom'
+import Logo     from '../../assets/img/Logoastolfo1.png'
 import {LogoImage, MenuWrapper} from './style.js'
 import Button from '../Button'
+import './Menu.css'
 
 function Menu() {
     return (
         <MenuWrapper className="Menu">
-            <a href='/'>
+            <Link to='/'>
                 <LogoImage src={Logo} alt="AstolFlix Logo" />
-            </a>
+            </Link>
 
-            <Button as="a" className="ButtonLink" href='/'>
+            <Button as={Link} className="ButtonLink" to='/cadastro/video'>
                 Novo Vídeo
             </Button>
         </MenuWrapper>
