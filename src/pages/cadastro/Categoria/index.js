@@ -1,49 +1,111 @@
-import React, { useState } from 'react'
-import PageDefault from '../../../components/PageDefault'
-import FormField from '../../../components/FormField'
-import { Containercss } from './styles.js'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import PageDefault from '../../../components/PageDefault';
+import FormField from '../../../components/FormField';
 
 function CadastroCategoria() {
   const valoresIniciais = {
     nome: '',
     descricao: '',
     cor: '',
-  }
+  };
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
-
   function setValue(chave, valor) {
-    // chave: nome, descricao, bla, bli
     setValues({
       ...values,
-      [chave]: valor, // nome: 'valor'
-    })
+      [chave]: valor,
+    });
   }
 
   function handleChange(infosDoEvento) {
     setValue(
       infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
+      infosDoEvento.target.value,
     );
   }
 
+  const CategoryWrapper = styled.div`
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 5px;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 50px; 
+      text-align: center;
+    }
+
+    @media(max-width: 800px) {
+      h1, h3 {
+        font-size: 18px;
+      }
+    }
+  `;
+
+  CategoryWrapper.button = styled.button`
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary);
+      border-radius: 0;
+      transition: all 700ms;
+    }
+  `;
+
+  CategoryWrapper.list = styled.ul`
+    padding: 16px 6px;
+    margin-bottom: 50px;
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-size: 18px;
+  `;
+
+  useEffect(() => {
+    if (window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias';
+      fetch(URL)
+        .then(async (respostaDoServer) => {
+          if (respostaDoServer.ok) {
+            const resposta = await respostaDoServer.json();
+            setCategorias(resposta);
+            return;
+          }
+          throw new Error('Não foi possível pegar os dados');
+        });
+    }
+  }, []);
+
   return (
     <PageDefault>
-      <Containercss>
-
-        <h1>Cadastro de Categoria: {values.nome}</h1>
+      <CategoryWrapper>
+        <h1>
+          Cadastro de Categoria
+        </h1>
 
         <form onSubmit={function handleSubmit(infosDoEvento) {
           infosDoEvento.preventDefault();
           setCategorias([
             ...categorias,
-            values
+            values,
           ]);
 
-          setValues(valoresIniciais)
-        }}>
-
+          setValues(valoresIniciais);
+        }}
+        >
           <FormField
             label="Nome da Categoria"
             type="text"
@@ -54,7 +116,7 @@ function CadastroCategoria() {
 
           <FormField
             label="Descrição"
-            type="text"
+            type="textarea"
             name="descricao"
             value={values.descricao}
             onChange={handleChange}
@@ -68,27 +130,26 @@ function CadastroCategoria() {
             onChange={handleChange}
           />
 
-          <button>
+          <CategoryWrapper.button>
             Cadastrar
-          </button>
+          </CategoryWrapper.button>
         </form>
 
-        
-        <span>Lista de Categorias</span>
-        <Containercss.list>
+        <h3>Lista de Categorias</h3>
+        <CategoryWrapper.list>
           <ul>
             {categorias.map((categoria, indice) => {
               return (
                 <li key={`${categoria}${indice}`}>
-                  {categoria.nome}
+                  {categoria.titulo}
                 </li>
               )
             })}
           </ul>
-        </Containercss.list>
-      </Containercss>
+        </CategoryWrapper.list>
+      </CategoryWrapper>
     </PageDefault>
-  )
+  );
 }
 
 export default CadastroCategoria;

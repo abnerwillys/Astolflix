@@ -37,17 +37,15 @@ const Arrow = styled.div`
 function NextArrow(props) {
   const { className, onClick } = props;
   return (
-    <teste>
-      <Arrow>
-        <Icon path={mdiChevronRight}
-          title="Próximo"
-          size={2.5}
-          color="white"
-          className={`shadow ${className}`}
-          onClick={onClick}
-        />
-      </Arrow>
-    </teste>
+    <Arrow>
+      <Icon path={mdiChevronRight}
+        title="Próximo"
+        size={2.5}
+        color="white"
+        className={`shadow ${className}`}
+        onClick={onClick}
+      />
+    </Arrow>
   );
 }
 
