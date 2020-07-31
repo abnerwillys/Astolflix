@@ -137,6 +137,12 @@ function CadastroCategoria() {
 
         <h3>Lista de Categorias</h3>
         <CategoryWrapper.list>
+
+          {categorias.length === 0 && (
+            <div>
+              Loading...
+            </div>
+          )}
           <ul>
             {categorias.map((categoria, indice) => {
               return (
