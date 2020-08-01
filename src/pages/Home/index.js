@@ -1,43 +1,57 @@
-import React  from 'react'
-import Menu   from '../../components/Menu'
-import dadosIniciais from '../../data/dados_iniciais.json'
+import React, { useEffect, useState } from 'react'
+import PageDefault from '../../components/PageDefault'
 import BannerMain from '../../components/BannerMain'
 import Carousel   from '../../components/Carousel'
-import Footer     from '../../components/Footer'
 import AppWrapper from './styles'
+import categoriasRepository from '../../repositories/categorias'
 
 function Home() {
+  const [dadosIniciais, setDadosIniciais] = useState([])
+
+  useEffect(() => {
+    // http://localhost:8080/categorias?_embed=videos
+    categoriasRepository.getAllWithVideos()
+    .then((categoriasComVideos) => {
+      console.log(categoriasComVideos)
+      setDadosIniciais(categoriasComVideos)
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+  }, [])
+
+
   return (
     <AppWrapper>
-      <Menu />
+      <PageDefault paddingAll={0} >
+        
+        {dadosIniciais.map((categoria, indice) => {
+          if(indice === 0) {
+            return (
+              <div key={categoria.id}>
+                <BannerMain 
+                  videoTitle={dadosIniciais[3].videos[1].titulo}
+                  url={dadosIniciais[3].videos[1].url}
+                  videoDescription={"A continuação de uma das melhores franquia de games de sobrevivência Zombie foi anunciado pela Microsoft em sua última conferência."}
+                />
+          
+                <Carousel 
+                  ignoreFirstVideo
+                  category={dadosIniciais[0]}
+                />
+              </div>
+            )
+          }
 
-      <BannerMain 
-        videoTitle={dadosIniciais.categorias[3].videos[1].titulo}
-        url={dadosIniciais.categorias[3].videos[1].url}
-        videoDescription={"A continuação de uma das melhores franquia de games de sobrevivência Zombie foi anunciado pela Microsoft em sua última conferência."}
-      />
+          return (
+            <Carousel 
+              key={categoria.id}
+              category={categoria}
+            />
+          )
+        })}
 
-      <Carousel 
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
-      <Carousel 
-        category={dadosIniciais.categorias[1]}
-      />
-      <Carousel 
-        category={dadosIniciais.categorias[2]}
-      />
-      <Carousel 
-        category={dadosIniciais.categorias[3]}
-      />
-      <Carousel 
-        category={dadosIniciais.categorias[4]}
-      />
-      <Carousel 
-        category={dadosIniciais.categorias[5]}
-      />
-
-      <Footer />
+      </PageDefault>
     </AppWrapper>
   )
 }

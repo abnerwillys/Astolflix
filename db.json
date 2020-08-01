@@ -1,21 +1,304 @@
 {
-    "categorias": [
-      {
-        "id": 1,
-        "titulo": "Front End",
-        "cor": "#6BD1FF",
-        "link_extra": {
-          "text": "Formação de Front End na Alura",
-          "url": "https://www.alura.com.br/cursos-online-front-end"
-        }
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Programação",
+      "cor": "#6b090a",
+      "link_extra": {
+        "text": "Formação de Front End/Back End na Alura",
+        "url": "https://www.alura.com.br/"
       }
-     ],
-    "videos": [
-      {
-        "id": 1,
-        "categoriaId": 1,
-        "titulo": "SEO com React",
-        "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
-      }
-    ]
-  }
+    },
+    {
+      "id": 2,
+      "titulo": "Músicas",
+      "cor": "#9c8e8e"
+    },
+    {
+      "id": 3,
+      "titulo": "Livros",
+      "cor": "#6b090a"
+    },
+    {
+      "id": 4,
+      "titulo": "Games",
+      "cor": "#9c8e8e"
+    },
+    {
+      "id": 5,
+      "titulo": "Filmes",
+      "cor": "#6b090a"
+    },
+    {
+      "id": 6,
+      "titulo": "Séries",
+      "cor": "#9c8e8e"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Componentização com VanillaJS #AluraMais",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "titulo": "Novidades do Angular v9",
+      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+    },
+    {
+      "id": 8,
+      "categoriaId": 1,
+      "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
+      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+    },
+    {
+      "id": 9,
+      "categoriaId": 1,
+      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
+      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
+    },
+    {
+      "id": 10,
+      "categoriaId": 1,
+      "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+      "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
+    },
+    {
+      "id": 11,
+      "categoriaId": 1,
+      "titulo": "API: Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+    },
+    {
+      "id": 12,
+      "categoriaId": 1,
+      "titulo": "Usando Git Direito",
+      "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "Dance Monkey - Cover by Stephanie Madrian",
+      "url": "https://www.youtube.com/watch?v=xesuNa-UsnU&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=15&t=0s"
+    },
+    {
+      "id": 14,
+      "categoriaId": 2,
+      "titulo": "Alan Walker & Ava Max - Alone, Pt. II ",
+      "url": "https://www.youtube.com/watch?v=WrHDquZ-tj0&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=3&t=0s"
+    },
+    {
+      "id": 15,
+      "categoriaId": 2,
+      "titulo": "Imagine Dragons Believer - Cover by Amy Lee",
+      "url": "https://www.youtube.com/watch?v=ePdpC4e2Xa0&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=18&t=0s"
+    },
+    {
+      "id": 16,
+      "categoriaId": 2,
+      "titulo": "Imagine Dragons Believer - Cover by One Voice Children's Choir",
+      "url": "https://www.youtube.com/watch?v=FUQheX3PSnY&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=19&t=0s"
+    },
+    {
+      "id": 17,
+      "categoriaId": 2,
+      "titulo": "Titanium + Alone ( cover by J.Fla )",
+      "url": "https://www.youtube.com/watch?v=YfrW2D766YA&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=6&t=0s"
+    },
+    {
+      "id": 18,
+      "categoriaId": 2,
+      "titulo": "Faded cover ItsAMoney",
+      "url": "https://www.youtube.com/watch?v=u6P2cs9FA2M&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=9&t=0s"
+    },
+    {
+      "id": 19,
+      "categoriaId": 2,
+      "titulo": "L' Amour Toujours",
+      "url": "https://www.youtube.com/watch?v=iR9gOXzJSws&list=PLD99qcg4glJa4domnlF9o5n3JGAvvfOJw&index=10&t=0s"
+    },
+    {
+      "id": 20,
+      "categoriaId": 3,
+      "titulo": "Harry Potter",
+      "url": "https://www.youtube.com/watch?v=NcA4xgjSyfU"
+    },
+    {
+      "id": 21,
+      "categoriaId": 3,
+      "titulo": "Eragon",
+      "url": "https://www.youtube.com/watch?v=kj-vAkeNeEE"
+    },
+    {
+      "id": 22,
+      "categoriaId": 3,
+      "titulo": "Game of Thrones",
+      "url": "https://www.youtube.com/watch?v=ClA_qtyWlE4"
+    },
+    {
+      "id": 23,
+      "categoriaId": 3,
+      "titulo": "The Witcher",
+      "url": "https://www.youtube.com/watch?v=eFbG6p5cl-I"
+    },
+    {
+      "id": 24,
+      "categoriaId": 4,
+      "titulo": "The Witcher",
+      "url": "https://www.youtube.com/watch?v=hquuwfa3FCo"
+    },
+    {
+      "id": 25,
+      "categoriaId": 4,
+      "titulo": "State of Decay 3",
+      "url": "https://www.youtube.com/watch?v=0mJQqTzDp28"
+    },
+    {
+      "id": 26,
+      "categoriaId": 4,
+      "titulo": "Sea of Thieves",
+      "url": "https://www.youtube.com/watch?v=X-Pvems0D2w"
+    },
+    {
+      "id": 27,
+      "categoriaId": 4,
+      "titulo": "Assassins Creed Valhalla",
+      "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
+    },
+    {
+      "id": 28,
+      "categoriaId": 4,
+      "titulo": "Fable",
+      "url": "https://www.youtube.com/watch?v=oVkSZXPklQ4"
+    },
+    {
+      "id": 29,
+      "categoriaId": 4,
+      "titulo": "Horizon Forbidden West",
+      "url": "https://www.youtube.com/watch?v=Lq594XmpPBg"
+    },
+    {
+      "id": 30,
+      "categoriaId": 4,
+      "titulo": "Marvel's Spider-Man: Miles Morales",
+      "url": "https://www.youtube.com/watch?v=gHzuHo80U2M"
+    },
+    {
+      "id": 31,
+      "categoriaId": 4,
+      "titulo": "Project Athia",
+      "url": "https://youtu.be/doe3kUqHIcM"
+    },
+    {
+      "id": 32,
+      "categoriaId": 4,
+      "titulo": "Red Dead Redemption 2",
+      "url": "https://www.youtube.com/watch?v=eaW0tYpxyp0"
+    },
+    {
+      "id": 33,
+      "categoriaId": 5,
+      "titulo": "Vingadores: Ultimato",
+      "url": "https://www.youtube.com/watch?v=g6ng8iy-l0U"
+    },
+    {
+      "id": 34,
+      "categoriaId": 5,
+      "titulo": "The Lord of the Rings: The Two Towers",
+      "url": "https://www.youtube.com/watch?v=LbfMDwc4azU"
+    },
+    {
+      "id": 35,
+      "categoriaId": 5,
+      "titulo": "Interestellar",
+      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+    },
+    {
+      "id": 36,
+      "categoriaId": 5,
+      "titulo": "The Old Guard",
+      "url": "https://www.youtube.com/watch?v=x4_EAlRLY_E"
+    },
+    {
+      "id": 37,
+      "categoriaId": 5,
+      "titulo": "Harry Potter e o Cálice de Fogo",
+      "url": "https://www.youtube.com/watch?v=RwJlOdtoHRE"
+    },
+    {
+      "id": 38,
+      "categoriaId": 5,
+      "titulo": "Matrix",
+      "url": "https://www.youtube.com/watch?v=2KnZac176Hs"
+    },
+    {
+      "id": 39,
+      "categoriaId": 6,
+      "titulo": "The Witcher",
+      "url": "https://www.youtube.com/watch?v=cSqi-8kAMmM"
+    },
+    {
+      "id": 40,
+      "categoriaId": 6,
+      "titulo": "The Umbrella Academy",
+      "url": "https://www.youtube.com/watch?v=5W3KwQsOTuo"
+    },
+    {
+      "id": 41,
+      "categoriaId": 6,
+      "titulo": "Orphan Black",
+      "url": "https://www.youtube.com/watch?v=VMxgycxrLQk&t"
+    },
+    {
+      "id": 42,
+      "categoriaId": 6,
+      "titulo": "Vikings",
+      "url": "https://www.youtube.com/watch?v=Y7d0A5re7-0"
+    },
+    {
+      "id": 43,
+      "categoriaId": 6,
+      "titulo": "Game of Thrones",
+      "url": "https://www.youtube.com/watch?v=rlR4PJn8b8I"
+    },
+    {
+      "id": 44,
+      "categoriaId": 6,
+      "titulo": "The Boys",
+      "url": "https://www.youtube.com/watch?v=cVHwlqyMyhM"
+    }
+  ]
+}

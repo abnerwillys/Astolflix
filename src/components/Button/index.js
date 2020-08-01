@@ -8,13 +8,16 @@ const Button = styled.button`
     color: var(--white);
     font-size: 16px;
     font-weight: bold;
+    margin-left: 12px;
     padding: 16px 24px;
     text-decoration: none;
     transition: opacity .3s;
 
     &:hover,
     &:focus {
-        opacity: .5;
+        background-color: #53585d;
+        border-radius: 16px;
+        transition: all 500ms;
     }
 
     @media (max-width: 800px) {

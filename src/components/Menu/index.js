@@ -12,9 +12,15 @@ function Menu() {
                 <LogoImage src={Logo} alt="AstolFlix Logo" />
             </Link>
 
-            <Button as={Link} className="ButtonLink" to='/cadastro/video'>
-                Novo Vídeo
-            </Button>
+            <div>
+                <Button as={Link} className="ButtonLink" to='/cadastro/video'>
+                    Novo Vídeo
+                </Button>
+
+                <Button as={Link} className="ButtonLink" to='/cadastro/categoria'>
+                    Nova Categoria
+                </Button>
+            </div>
         </MenuWrapper>
     )
 }
