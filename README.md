@@ -2,7 +2,7 @@
     <img 
         src="/src/assets/img/Logoastolfo.png"
         width="300px"
-        alt="Logo do LaunchBase">
+        alt="Logo do Astolflix">
 </h1>
 
 
